@@ -1,7 +1,9 @@
+
 from fastapi import FastAPI
 import joblib
 
 app = FastAPI()
+
 model = joblib.load("modelo/modelo_treinado.pkl")
 
 @app.get("/prever")
